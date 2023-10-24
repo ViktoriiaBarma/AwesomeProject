@@ -11,12 +11,10 @@ import {
   Keyboard,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import bgimg from "../assets/PhotoBG.png";
+import bgimg from "../assets/Photo BG.png";
 import AddPhoto from "../assets/svg/add.svg";
 
-
 const RegistrationScreen = () => {
-
   const navigation = useNavigation();
 
   const [login, setLogin] = useState("");
@@ -60,58 +58,58 @@ const RegistrationScreen = () => {
   };
 
   return (
-     <ImageBackground source={bgimg} resizeMode="cover" style={styles.image}>
+    <ImageBackground source={bgimg} resizeMode="cover" style={styles.image}>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <KeyboardAvoidingView
           style={styles.container}
           behavior={Platform.OS === "android" ? "padding" : "height"}
           keyboardVerticalOffset={-82}>
-            <View style={styles.avatar}>
-              <View style={styles.icon}>
-                <AddPhoto />
-              </View>
+          <View style={styles.avatar}>
+            <View style={styles.icon}>
+              <AddPhoto />
             </View>
-            <Text style={styles.title}>Реєстрація</Text>
+          </View>
+          <Text style={styles.title}>Реєстрація</Text>
 
-            <View style={styles.inputBlock}>
-              <TextInput
-                style={[styles.input, isLoginFocused && styles.inputFocused]}
-                onFocus={handleLoginFocus}
-                onBlur={handleLoginBlur}
-                placeholder="Логін"
-                placeholderTextColor="#BDBDBD"
-                value={login}
-                onChangeText={(text) => setLogin(text)}
-              />
-            </View>
+          <View style={styles.inputBlock}>
+            <TextInput
+              style={[styles.input, isLoginFocused && styles.inputFocused]}
+              onFocus={handleLoginFocus}
+              onBlur={handleLoginBlur}
+              placeholder="Логін"
+              placeholderTextColor="#BDBDBD"
+              value={login}
+              onChangeText={(text) => setLogin(text)}
+            />
+          </View>
 
-            <View style={styles.inputBlock}>
-              <TextInput
-                style={[styles.input, isEmailFocused && styles.inputFocused]}
-                onFocus={handleEmailFocus}
-                onBlur={handleEmailBlur}
-                placeholder="Адреса електронної пошти"
-                placeholderTextColor="#BDBDBD"
-                value={email}
-                onChangeText={(text) => setEmail(text)}
-              />
-            </View>
+          <View style={styles.inputBlock}>
+            <TextInput
+              style={[styles.input, isEmailFocused && styles.inputFocused]}
+              onFocus={handleEmailFocus}
+              onBlur={handleEmailBlur}
+              placeholder="Адреса електронної пошти"
+              placeholderTextColor="#BDBDBD"
+              value={email}
+              onChangeText={(text) => setEmail(text)}
+            />
+          </View>
 
-            <View style={styles.inputBlock}>
-              <TextInput
-                style={[styles.input, isPasswordFocused && styles.inputFocused]}
-                onFocus={handlePasswordFocus}
-                onBlur={handlePasswordBlur}
-                placeholder="Пароль"
-                placeholderTextColor="#BDBDBD"
-                secureTextEntry={!showPassword}
-                value={password}
-                onChangeText={(text) => setPassword(text)}
-              />
-              <Text onPress={handleShowPassword} style={styles.togglePassword}>
-                {showPassword ? "Сховати" : "Показати"}
-              </Text>
-            </View>
+          <View style={styles.inputBlock}>
+            <TextInput
+              style={[styles.input, isPasswordFocused && styles.inputFocused]}
+              onFocus={handlePasswordFocus}
+              onBlur={handlePasswordBlur}
+              placeholder="Пароль"
+              placeholderTextColor="#BDBDBD"
+              secureTextEntry={!showPassword}
+              value={password}
+              onChangeText={(text) => setPassword(text)}
+            />
+            <Text onPress={handleShowPassword} style={styles.togglePassword}>
+              {showPassword ? "Сховати" : "Показати"}
+            </Text>
+          </View>
         </KeyboardAvoidingView>
       </TouchableWithoutFeedback>
       <View style={styles.buttonBlock}>
@@ -184,8 +182,8 @@ const styles = StyleSheet.create({
     color: "#BDBDBD",
     borderRadius: 8,
   },
-    inputFocused: {
-    color:"212121",
+  inputFocused: {
+    color: "212121",
     borderColor: "#FF6C00",
     backgroundColor: "#fff",
   },
